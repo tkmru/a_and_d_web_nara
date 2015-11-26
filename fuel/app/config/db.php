@@ -8,7 +8,7 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'dsn'        => "mysql:host=localhost;dbname=adweb2",
+			'dsn'        => "mysql:host=127.0.0.1;dbname=adweb2",
 			'username'   => "adweb2",
 			'password'   => "adweb2"
 		)
