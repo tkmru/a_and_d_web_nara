@@ -116,14 +116,14 @@ return array(
 	 * Security settings
 	 */
 	'security' => array(
-		// 'csrf_autoload'    => false,
-		// 'csrf_token_key'   => 'fuel_csrf_token',
-		// 'csrf_expiration'  => 0,
+		'csrf_autoload'    => true,
+		'csrf_token_key'   => 'fuel_csrf_token',
+		'csrf_expiration'  => 0,
 
 		/**
 		 * A salt to make sure the generated security tokens are not predictable
 		 */
-		// 'token_salt'            => 'put your salt value here to make the token more secure',
+		'token_salt'            => 'tekitounirandomni',
 
 		/**
 		 * Allow the Input class to use X headers when present
@@ -131,7 +131,7 @@ return array(
 		 * Examples of these are HTTP_X_FORWARDED_FOR and HTTP_X_FORWARDED_PROTO, which
 		 * can be faked which could have security implications
 		 */
-		// 'allow_x_headers'       => false,
+		'allow_x_headers'       => true,
 
 		/**
 		 * This input filter can be any normal PHP function as well as 'xss_clean'
@@ -139,7 +139,7 @@ return array(
 		 * WARNING: Using xss_clean will cause a performance hit.
 		 * How much is dependant on how much input data there is.
 		 */
-		'uri_filter'       => array('htmlentities'),
+		'uri_filter'       => array(), // htmlentities_double_encodeを有効にするため
 
 		/**
 		 * This input filter can be any normal PHP function as well as 'xss_clean'
@@ -147,7 +147,7 @@ return array(
 		 * WARNING: Using xss_clean will cause a performance hit.
 		 * How much is dependant on how much input data there is.
 		 */
-		// 'input_filter'  => array(),
+		//'input_filter'  => array(),
 
 		/**
 		 * This output filter can be any normal PHP function as well as 'xss_clean'
@@ -160,17 +160,18 @@ return array(
 		/**
 		 * Encoding mechanism to use on htmlentities()
 		 */
-		// 'htmlentities_flags' => ENT_QUOTES,
+		'htmlentities_flags' => ENT_QUOTES,
 
 		/**
 		 * Wether to encode HTML entities as well
 		 */
-		// 'htmlentities_double_encode' => false,
+		'htmlentities_double_encode' => true,   // http://blog.livedoor.jp/erscape/archives/6891635.html
+
 
 		/**
 		 * Whether to automatically filter view data
 		 */
-		// 'auto_filter_output'  => true,
+		'auto_filter_output'  => true,
 
 		/**
 		 * With output encoding switched on all objects passed will be converted to strings or
