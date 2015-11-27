@@ -116,14 +116,14 @@ return array(
 	 * Security settings
 	 */
 	'security' => array(
-		'csrf_autoload'    => true,
+		//'csrf_autoload'    => true,
 		'csrf_token_key'   => 'fuel_csrf_token',
 		'csrf_expiration'  => 0,
 
 		/**
 		 * A salt to make sure the generated security tokens are not predictable
 		 */
-		'token_salt'            => 'tekitounirandomni',
+		//'token_salt'            => 'tekitounirandomni',
 
 		/**
 		 * Allow the Input class to use X headers when present
