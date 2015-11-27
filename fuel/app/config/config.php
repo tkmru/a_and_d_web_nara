@@ -116,7 +116,8 @@ return array(
 	 * Security settings
 	 */
 	'security' => array(
-		//'csrf_autoload'    => true,
+		//'csrf_autoload'    => true, //csrf対策を有効にするには、POST時にtokenを投げるように変更しないといけない
+		//自由にユーザーを作れるA&DではあまりCSRFの対策をする意味は無い。外部公開するならちゃんとやる。
 		'csrf_token_key'   => 'fuel_csrf_token',
 		'csrf_expiration'  => 0,
 

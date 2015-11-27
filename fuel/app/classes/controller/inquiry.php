@@ -12,7 +12,7 @@ class Controller_Inquiry extends Controller_Base
 			if(Input::post("kakunin", 0) == 1)
 			{
 				$time = time();
-				$name = DB::quote($_POST["name"]);
+				$name = DB::quote($_POST["name"]); //DB::quote()によりエスケープ
 				$email = DB::quote($_POST["email"]);
 				$title = DB::quote($_POST["title"]);
 				$body = DB::quote($_POST["body"]);
